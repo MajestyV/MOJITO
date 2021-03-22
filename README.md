@@ -11,7 +11,7 @@ To under stand why the characterization results come in the form that we see. Th
 ## II. Principles of Characterization Techniques
 ### A. X-ray Diffraction (XRD)
 ### B. Raman
-### C. UV-vis absorption and photoluminescence
+### C. UV-vis Absorption and Photoluminescence
 
 ## III. Basic Idea of the Analysis Method
 In this part, we are going to talk about the idea that supports the whole project. To fully understand our testing results, knowing only the working principles of the characterization techniques is insufficient. Ignoring other factors will only give you a spherical chicken in vacuum. There is actually far more profound knowledge driving the real world we live in. The first thing that we will talk about in this section, is broadening. 
