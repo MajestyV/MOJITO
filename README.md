@@ -1,5 +1,5 @@
 # MOJITO
-Materials prOJect on analyzIng specTrOscopy
+**M**aterials pr**OJ**ect on analyz**I**ng spec**T**r**O**scopy
 
 ## I. Introduction
 The name *MOJITO* stands for materials project on analyzing spectroscopy. Though this abbreviation might not be favourable to everyone, this project is actually aiming to solve the problems of analyzing spectrums for anyone who works in materials science and related areas.
