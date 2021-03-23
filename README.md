@@ -6,7 +6,7 @@ The name MOJITO stands for materials project on analyzing spectroscopy. Though t
 
 To begin with, let's consider some useful characterization techniques that we use in these areas. The first few ones that come up to me are X-ray Diffraction (XRD), Raman, UV-vis absorption and photoluminescence, and these will be the starting point of our project.
 
-To under stand why the characterization results come in the form that we see. The first thing we need to do is to understand the working principles of the tests we carried out. So, we will first talk about the principles of the characterization techniques.
+To under stand why the characterization results come in the form that we see. The first thing we need to do is to figure out how light is interacting with our materials. So, we will first talk about the             The first thing we need to do is to understand the working principles of the tests we carried out. So, we will first talk about the principles of the characterization techniques.
 
 ## II. Principles of Characterization Techniques
 ### A. X-ray Diffraction (XRD)
@@ -15,3 +15,15 @@ To under stand why the characterization results come in the form that we see. Th
 
 ## III. Basic Idea of the Analysis Method
 In this part, we are going to talk about the idea that supports the whole project. To fully understand our testing results, knowing only the working principles of the characterization techniques is insufficient. Ignoring other factors will only give you a spherical chicken in vacuum. There is actually far more profound knowledge driving the real world we live in. The first thing that we will talk about in this section, is broadening. 
+### A. Natural Line Broadening （自然致宽）
+The origin of natrual line broadening is the energy-time uncertainty principle （能量-时间不确定性原理）. The 
+### B. Doppler Broadening （多普勒致宽）
+### C. Pressure Broadening （压力致宽）
+### D. Power, or saturation, broadening （功率，或饱和致宽）
+
+
+
+
+
+## References
+[1]
