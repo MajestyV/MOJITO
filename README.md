@@ -36,4 +36,4 @@ In this part, we will have a deep look at the working principles of the characte
 
 
 ## References
-<div id="reference-1">[1]</div> J. Michael Hollas, 2004. *MODERN* *SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.
+<div id="reference-1"></div> [1] J. Michael Hollas, 2004. *MODERN* *SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.
