@@ -2,7 +2,7 @@
 Materials prOJect on analyzIng specTrOscopy
 
 ## I. Introduction
-The name MOJITO stands for materials project on analyzing spectroscopy. Though this abbreviation might not be favourable to everyone, this project is actually aiming to solve the problems of analyzing spectrums for anyone who works in materials science and related areas.
+The name *MOJITO* stands for materials project on analyzing spectroscopy. Though this abbreviation might not be favourable to everyone, this project is actually aiming to solve the problems of analyzing spectrums for anyone who works in materials science and related areas.
 
 To begin with, let's consider some useful characterization techniques that we use in these areas. The first few ones that come up to me are X-ray Diffraction (XRD), Raman, UV-vis absorption and photoluminescence, and these will be the starting point of our project.
 
@@ -12,7 +12,14 @@ To under stand why the characterization results come in the form that we see. Th
 In this part, we are going to talk about the interactions between light and materials. This will give us a glimpse on the origin of the shape of spectrums that we can get from characterizations. The first thing that we will talk about in this section, is broadening. 
 
 ### A. Natural Line Broadening （自然致宽）
-The origin of natrual line broadening is the energy-time uncertainty principle （能量-时间不确定性原理）. The 
+The origin of natrual line broadening is the energy-time uncertainty principle （能量-时间不确定性原理）. Let's consider a scene of a light is exciting electrons to higher states.
+
+![1](https://user-images.githubusercontent.com/53797732/112113087-525ae580-8bf1-11eb-8186-20c7765e5607.png)
+
+*Figure 1. Absorption and emission process between states m and n [1]*
+
+
+
 
 ### B. Doppler Broadening （多普勒致宽）
 
