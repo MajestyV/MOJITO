@@ -16,7 +16,7 @@ The origin of natrual line broadening is the energy-time uncertainty principle ï
 
 ![1](https://user-images.githubusercontent.com/53797732/112113087-525ae580-8bf1-11eb-8186-20c7765e5607.png)
 
-*Figure 1. Absorption and emission process between states m and n [1]*
+*Figure 1. Absorption and emission process between states m and n*[<sup>[1]</sup>](#references)
 
 
 
@@ -34,6 +34,7 @@ In this part, we will have a deep look at the working principles of the characte
 ### C. UV-vis Absorption and Photoluminescence
 
 
+<div id="references"></div>
 
 ## References
 [1]
