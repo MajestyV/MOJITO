@@ -19,9 +19,17 @@ The origin of natrual line broadening is the energy-time uncertainty principle �
 *Figure 1. Absorption and emission process between states m and n*[<sup>[1]</sup>](#reference-1)
 :---------:
 
-When the excitation is withdrawn, the excited particles will give out the excessive energy and drop back to the state *E*<sub>*m*</sub> (eg. ground state, 基态), and the excessive energy might turn into heat or light. If the energy comes out in the form of light, we might be able to measure the energy difference between *E*<sub>*n*</sub> and *E*<sub>*m*</sub> by measuring the frequency of this light, which is actually part of the principles of UV-vis absorption and photoluminescence and we will have deeper look into them in latter discussion. 
+When the excitation is withdrawn, the excited particles will give out the excessive energy and drop back to the state *m* (eg. ground state, 基态), and the excessive energy might turn into heat or light. If the energy comes out in the form of light, we might be able to measure the energy difference between state *n* (eg. excited state, 激发态) and state *m* by measuring the frequency of this light, which is actually part of the principles of UV-vis absorption and photoluminescence and we will have deeper look into them in latter discussion. 
 
-Assuming light is coming out in this process, why there a broadening? Wouldn't the output light possess the energy of exactly *E*<sub>*n*</sub>-*E*<sub>*m*</sub>? The answer is negative! Because the population of electrons staying in *E*<sub>*n*</sub> is reducing, 
+Assuming light is coming out in this process, why there a broadening? Wouldn't the output light possess the energy of exactly *E*<sub>*n*</sub>-*E*<sub>*m*</sub>? The answer is negative! Because the population of electrons staying in state *n* is reducing, the corresponding energy level will decay as the population of the electrons decreases. And this decay is a first-order process:
+
+$$
+
+$$
+
+where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=\1/tau$.[<sup>[1]</sup>](#reference-1)
+
+
 
 ### B. Doppler Broadening （多普勒致宽）
 
