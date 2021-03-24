@@ -9,7 +9,7 @@ To begin with, let's consider some useful characterization techniques that we us
 To under stand why the characterization results come in the form that we see. The first thing we need to do is to figure out how light is interacting with our materials. So, we will first talk about the mechanism of interaction between light and our materials.
 
 ## II. Interactions Between Electromagnetic Radiation and Materials
-In this part, we are going to talk about the interactions between light and materials. This will give us a glimpse on the origin of the shape of spectrums that we can get from characterizations. Only spherical chicken in vacuum (真空中的球形鸡) will appear in the form of a seies of $\delta$ functions. There are more profound knowledge that drives the real world that we live in. The first thing that we will talk about in this section, is broadening. 
+In this part, we are going to talk about the interactions between light and materials. This will give us a glimpse on the origin of the shape of spectrums that we can get from characterizations. Only spherical chicken in vacuum (真空中的球形鸡) will appear in the form of a seies of $\delta$-functions. There are more profound knowledge that drives the real world that we live in. The first thing that we will talk about in this section, is broadening. 
 
 ### A. Natural Line Broadening （自然致宽）
 The origin of natrual line broadening is the energy-time uncertainty principle （能量-时间不确定性原理）. Let's consider a scene of a light is exciting electrons to higher states.
@@ -19,7 +19,9 @@ The origin of natrual line broadening is the energy-time uncertainty principle �
 *Figure 1. Absorption and emission process between states m and n*[<sup>[1]</sup>](#reference-1)
 :---------:
 
+When the excitation is withdrawn, the excited particles will give out the excessive energy and drop back to the state *E*<sub>*m*</sub> (eg. ground state, 基态), and the excessive energy might turn into heat or light. If the energy comes out in the form of light, we might be able to measure the energy difference between *E*<sub>*n*</sub> and *E*<sub>*m*</sub> by measuring the frequency of this light, which is actually part of the principles of UV-vis absorption and photoluminescence and we will have deeper look into them in latter discussion. 
 
+Assuming light is coming out in this process, why there a broadening? Wouldn't the output light possess the energy of exactly *E*<sub>*n*</sub>-*E*<sub>*m*</sub>? The answer is negative! Because the population of electrons staying in *E*<sub>*n*</sub> is reducing, 
 
 ### B. Doppler Broadening （多普勒致宽）
 
@@ -28,7 +30,7 @@ The origin of natrual line broadening is the energy-time uncertainty principle �
 ### D. Power, or saturation, broadening （功率，或饱和致宽）
 
 ## III. Principles of Characterization Techniques
-In this part, we will have a deep look at the working principles of the characterization we usually carry out in materials science and related areas. To fully understand our testing results, knowing only the mechanism dicting the interactions between light and materials is insufficient. The situation changes from time to time as we always try to characterize our device from different perspectives. To understand the properties of our samples, we need to have a comprehensive understanding about the testing tools we used. So, let's take a look at the common characterization methods we used. 
+In this part, we will have a deep look at the working principles of the characterizations we usually carry out in materials science and related areas. To fully understand our testing results, knowing only the mechanism dicting the interactions between light and materials is insufficient. The situation changes from time to time as we always try to characterize our device from different perspectives. To understand the properties of our samples, we need to have a comprehensive understanding about the testing tools we used. So, let's take a look at the common characterization methods we used. 
 ### A. X-ray Diffraction (XRD)
 ### B. Raman
 ### C. UV-vis Absorption and Photoluminescence
