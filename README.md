@@ -14,7 +14,7 @@ In this part, we are going to talk about the interactions between light and mate
 ### A. Natural Line Broadening （自然致宽）
 The origin of natrual line broadening is the energy-time uncertainty principle （能量-时间不确定性原理）. Let's consider a scene of a light is exciting electrons to higher states.
 
-![1](https://user-images.githubusercontent.com/53797732/112113087-525ae580-8bf1-11eb-8186-20c7765e5607.png#pic_center)
+![1](https://user-images.githubusercontent.com/53797732/112113087-525ae580-8bf1-11eb-8186-20c7765e5607.png)
 
 *Figure 1. Absorption and emission process between states m and n*[<sup>[1]</sup>](#reference-1)
 :---------:
