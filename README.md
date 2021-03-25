@@ -39,7 +39,9 @@ $\tau$ is exactly the lifetime discussed above. Then the whole wavefunction coul
 
 $$ {\Psi} = {\psi}(\pmb{r})e^{-iEt/{\hbar}-t/2{\tau}}    \Longrightarrow    {\phi}(t) = e^{-iEt/{\hbar}-t/2{\tau}} $$.
 
-If we applied Fourier transform to the time-dependent term ${\phi}(t)$
+If we applied Fourier transform to the time-dependent term ${\phi}(t)$, we will then have
+
+$$ g({\varepsilon}) = {\int}{\phi}(t)e^{i{\varepsilon}t/{hbar}}d{\varepsilon} $$
 
 ### B. Doppler Broadening （多普勒致宽）
 
