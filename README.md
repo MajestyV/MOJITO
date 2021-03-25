@@ -47,7 +47,11 @@ and as a result
 
 $$ g({\varepsilon}) = \frac{{\hbar}/2{\pi}{\tau}}{({\varepsilon}-E)^2+({\hbar}/2{\tau})^2} $$.
 
-This is a Lorentzian.
+This is a Lorentzian. **In conclusion, the lineshape of spectrum induced by natural broadening is Lorentzian.** The energy distribution of the above formula is
+
+$$ {\Delta}E = {\theta}_{HWHM} = {\hbar}/2{\tau}    \Longrightarrow    {\Delta}E{\Delta}t = {\Delta}E{\tau} = {\hbar}/2 $$,
+
+and this is the energy-time uncertainty principle (HWHM, half width at half maximum, 半峰半宽).
 
 ### B. Doppler Broadening （多普勒致宽）
 
