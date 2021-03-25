@@ -31,7 +31,7 @@ If we are having a state that has a stationary, accurate energy *E* and the corr
 
 $$ {\Psi} = {\psi}(\pmb{r}){\phi}(t) = {\psi}(\pmb{r})e^{i{\omega}t} = {\psi}(\pmb{r})e^{iEt/{\hbar}} $$
 
-where ***r*** is position and $\omega$ is the angular velocity of this wave (The de Brogile equation: $E = h{\nu} = {\hbar}{\omega}$, ${\nu} = {\omega}/2{\pi}$ is the frequency).[<sup>[2]</sup>](#reference-2)
+where ***r*** is position and $\omega$ is the angular velocity of this wave (The de Brogile equation: $E = h{\nu} = {\hbar}{\omega}$, ${\nu} = {\omega}/2{\pi}$ is the frequency).[<sup>[2,3]</sup>](#reference-2)
 
 ### B. Doppler Broadening （多普勒致宽）
 
@@ -47,6 +47,7 @@ In this part, we will have a deep look at the working principles of the characte
 
 
 ## References
-[1] [J. Michael Hollas, 2004. *MODERN SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.](http://www.chemistry.uoc.gr/lapkin/Hollas_ModernSpectroscopy.pdf)<div id="reference-1"></div> 
-[2] [J. Michael Hollas, 2004. *MODERN SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.](http://www.chemistry.uoc.gr/lapkin/Hollas_ModernSpectroscopy.pdf)
+[1] [J. Michael Hollas (2004). *MODERN SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.](http://www.chemistry.uoc.gr/lapkin/Hollas_ModernSpectroscopy.pdf)<div id="reference-1"></div> 
+[2] [David J. Griffiths (2005). *Introduction to Quantum Mechanics*. Upper Saddle River, NJ: Pearson Prentice Hall.](http://gr.xjtu.edu.cn/c/document_library/get_file?p_l_id=21699&folderId=2383652&name=DLFE-82647.pdf)
+[3] 
 
