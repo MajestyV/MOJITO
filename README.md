@@ -29,7 +29,7 @@ where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-o
 
 If we are having a state that has a accurate energy *E* and the corresponding wavefunctions is $\Psi$, then we could express this wavefunction as
 
-$$ {\Psi} = Ae^{i(\pmb{kr}-{\omega}t $$
+$$ {\Psi} = Ae^{i(\pmb{kr}-{\omega}t)} $$
 
 
 
