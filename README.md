@@ -23,9 +23,7 @@ When the excitation is withdrawn, the excited particles will give out the excess
 
 Assuming light is coming out in this process, why there a broadening? Wouldn't the output light possess the energy of exactly *E*<sub>*n*</sub>-*E*<sub>*m*</sub>? The answer is negative! Because the population of electrons staying in state *n* is reducing, the corresponding energy level will decay as the population of the electrons decreases. And this decay is a first-order process:
 
-$$
-
-$$
+$$ -\frac{dN_{n}}{dt} = kN_{n} $$
 
 where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=1/\tau$.[<sup>[1]</sup>](#reference-1)
 
