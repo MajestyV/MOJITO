@@ -31,7 +31,7 @@ If we are having a state that has a stationary, accurate energy *E* and the corr
 
 $$ {\Psi} = {\psi}(\pmb{r}){\phi}(t) = {\psi}(\pmb{r})e^{i{\omega}t} = {\psi}(\pmb{r})e^{iEt/{\hbar}} $$
 
-where ***k*** is the wavevector (you could say this is spatial frequency as well), ***r*** is the position, $\omega$ is the 
+where ***r*** is position and $\omega$ is the angular velocity of this wave (The de Brogile equation: $E = h{\nu} = {\hbar}{\omega}$, ${\nu} = {\omega}/2{\pi}$ is the frequency).[<sup>[2]</sup>](#reference-2)
 
 ### B. Doppler Broadening （多普勒致宽）
 
