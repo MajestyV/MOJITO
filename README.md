@@ -48,6 +48,6 @@ In this part, we will have a deep look at the working principles of the characte
 
 ## References
 [1] [J. Michael Hollas (2004). *MODERN SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.](http://www.chemistry.uoc.gr/lapkin/Hollas_ModernSpectroscopy.pdf)<div id="reference-1"></div> 
-[2] [David J. Griffiths (2005). *Introduction to Quantum Mechanics*. Upper Saddle River, NJ: Pearson Prentice Hall.](http://gr.xjtu.edu.cn/c/document_library/get_file?p_l_id=21699&folderId=2383652&name=DLFE-82647.pdf)
+[2] [David J. Griffiths (2005). *Introduction to Quantum Mechanics*. Upper Saddle River, NJ: Pearson Prentice Hall.](http://gr.xjtu.edu.cn/c/document_library/get_file?p_l_id=21699&folderId=2383652&name=DLFE-82647.pdf)<div id="reference-2"></div>
 [3] 
 
