@@ -25,7 +25,11 @@ Assuming light is coming out in this process, why there a broadening? Wouldn't t
 
 $$ -\frac{dN_{n}}{dt} = kN_{n} $$
 
-where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=1/\tau$.[<sup>[1]</sup>](#reference-1) It should be emphasized that $\tau$ is the so-called lifetime of states ($\tau$ 就是人们一直提到的量子态的寿命).
+where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=1/\tau$.[<sup>[1]</sup>](#reference-1) It should be emphasized that $\tau$ is the so-called lifetime of states ($\tau$ 就是人们一直提到的量子态的寿命). How exactly did this decay connected with the broadening of spectrums?
+
+If we are having a state that has a accurate energy *E* and the corresponding wavefunctions is $\Psi$, then we could express this wavefunction as
+
+$$ {\Psi} = Ae^{i(\pmb{kr}-{\omega}t $$
 
 
 
