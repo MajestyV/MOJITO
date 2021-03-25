@@ -27,7 +27,7 @@ $$
 
 $$
 
-where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=\1/tau$.[<sup>[1]</sup>](#reference-1)
+where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=1/\tau$.[<sup>[1]</sup>](#reference-1)
 
 
 
