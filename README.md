@@ -39,13 +39,15 @@ $\tau$ is exactly the lifetime discussed above. Then the whole wavefunction coul
 
 $$ {\Psi} = {\psi}(\pmb{r})e^{-iEt/{\hbar}-t/2{\tau}}    \Longrightarrow    {\phi}(t) = e^{-iEt/{\hbar}-t/2{\tau}} $$.
 
-If we applied Fourier transform (见到时域函数，第一反应就应当是祭出大招：傅里叶变换！） to the time-dependent term ${\phi}(t)$, we will then have
+If we applied Fourier transform (对时域函数宝具：傅里叶变换) to the time-dependent term ${\phi}(t)$, we will then have
 
 $$ g({\varepsilon}) = {\int}{\phi}(t)e^{i{\varepsilon}t/{\hbar}}dt $$
 
 and as a result
 
 $$ g({\varepsilon}) = \frac{{\hbar}/2{\pi}{\tau}}{({\varepsilon}-E)^2+({\hbar}/2{\tau})^2} $$.
+
+This is a Lorentzian.
 
 ### B. Doppler Broadening （多普勒致宽）
 
