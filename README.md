@@ -25,13 +25,13 @@ Assuming light is coming out in this process, why there a broadening? Wouldn't t
 
 $$ -\frac{dN_{n}}{dt} = kN_{n} $$
 
-where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $k=1/\tau$.[<sup>[1]</sup>](#reference-1) It should be emphasized that $\tau$ is the so-called lifetime of states ($\tau$ 就是人们一直提到的量子态的寿命). How exactly did this decay connected with the broadening of spectrums?
+where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-order rate conbstant that $\rm k=1/\tau$.[<sup>[1]</sup>](#reference-1) It should be emphasized that $\tau$ is the so-called lifetime of states ($\tau$ 就是人们一直提到的量子态的寿命). How exactly did this decay connected with the broadening of spectrums?
 
 If we are having a state that has a stationary, accurate energy *E* and the corresponding wavefunctions is $\Psi$, then this state is a stationary state. (在这种情况下，体系的势能与时间无关，只是一个关于位置的函数，*U* = *U*(***r***)。因此在解薛定谔方程的时候，我们可以分离变量，即最后求得的波函数可以写成位置分量与时间分量的相乘。) We could seperate our wavefunction into two terms, time-depending term and position-depending term:
 
 $$ {\Psi} = {\psi}(\pmb{r}){\phi}(t) = {\psi}(\pmb{r})e^{i{\omega}t} = {\psi}(\pmb{r})e^{iEt/{\hbar}} $$
 
-where ***r*** is position and $\omega$ is the angular velocity of this wave (The de Brogile equation: $E = h{\nu} = {\hbar}{\omega}$, ${\nu} = {\omega}/2{\pi}$ is the frequency).[<sup>[2]</sup>](#reference-2)
+where ***r*** is position and $\omega$ is the angular velocity of this wave (The de Brogile equation: $\rm E = h{\nu} = {\hbar}{\omega}$, $\rm {\nu} = {\omega}/2{\pi}$ is the frequency).[<sup>[2]</sup>](#reference-2)
 
 ### B. Doppler Broadening （多普勒致宽）
 
