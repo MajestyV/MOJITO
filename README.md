@@ -49,9 +49,9 @@ $$ g({\varepsilon}) = \frac{{\hbar}/2{\pi}{\tau}}{({\varepsilon}-E)^2+({\hbar}/2
 
 This is a Lorentzian. **In conclusion, the lineshape of spectrum induced by natural broadening is Lorentzian.** The energy distribution of the above formula is
 
-$$ {\Delta}E = {\theta}_{HWHM} = {\hbar}/2{\tau}    \Longrightarrow    {\Delta}E{\Delta}t = {\Delta}E{\tau} = {\hbar}/2 $$,
+$$ {\Delta}E = {\theta}_{HWHM} = {\hbar}/2{\tau}    \Longrightarrow    {\Delta}E{\Delta}t {\geq} {\Delta}E{\tau} = {\hbar}/2 $$,
 
-and this is the energy-time uncertainty principle (HWHM, half width at half maximum, 半峰半宽).
+and this is the energy-time uncertainty principle (HWHM, half width at half maximum, 半峰半宽).[<sup>[4]</sup>](#reference-4)
 
 ### B. Doppler Broadening （多普勒致宽）
 
@@ -70,5 +70,6 @@ In this part, we will have a deep look at the working principles of the characte
 [1] [J. Michael Hollas (2004). *MODERN SPECTROSCOPY*, 4th ed. West Sussex, England: John Wiley & Sons Ltd. 452 pp.](http://www.chemistry.uoc.gr/lapkin/Hollas_ModernSpectroscopy.pdf)<div id="reference-1"></div>
 [2] [David J. Griffiths (2005). *Introduction to Quantum Mechanics*. Upper Saddle River, NJ: Pearson Prentice Hall.](http://gr.xjtu.edu.cn/c/document_library/get_file?p_l_id=21699&folderId=2383652&name=DLFE-82647.pdf)<div id="reference-2"></div>
 [3] [周世勋 (2009). *量子力学教程*, 第二版. 北京, 中国: 高等教育出版社.](https://books.google.com.hk/books/about/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%95%99%E7%A8%8B.html?id=bV6OQwAACAAJ&redir_esc=y)<div id="reference-3"></div>
-[4] [
+[4] [Luyao Zou. 能量-时间的不确定关系如何导出光谱自然展宽？](https://www.zhihu.com/question/33565055/answer/75944534)<div id="reference-4"></div>
+[5] [
 
