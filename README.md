@@ -29,7 +29,7 @@ where *N*<sub>*n*</sub> is the number of electron at state *n*, k is the first-o
 
 If we are having a state that has a stationary, accurate energy *E* and the corresponding wavefunctions is $\Psi$, then this state is a stationary state. (在这种情况下，体系的势能与时间无关，只是一个关于位置的函数，*U* = *U*(***r***)。因此在解薛定谔方程的时候，我们可以分离变量，即最后求得的波函数可以写成位置分量与时间分量的相乘。) We could seperate our wavefunction into two terms, time-depending term and position-depending term:
 
-$$ {\Psi} = {\psi}(\pmb{r}){\phi}(t) = {\psi}(\pmb{r})e^{i{\omega}t} = {\psi}(\pmb{r})e^{iEt/{\hbar} $$
+$$ {\Psi} = {\psi}(\pmb{r}){\phi}(t) = {\psi}(\pmb{r})e^{i{\omega}t} = {\psi}(\pmb{r})e^{iEt/{\hbar}} $$
 
 where ***k*** is the wavevector (you could say this is spatial frequency as well), ***r*** is the position, $\omega$ is the 
 
