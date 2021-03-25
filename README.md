@@ -33,13 +33,13 @@ $$ {\Psi} = {\psi}(\pmb{r}){\phi}(t) = {\psi}(\pmb{r})e^{-i{\omega}t} = {\psi}(\
 
 where ***r*** is position and $\omega$ is the angular velocity of this wave (The de Brogile equation: $E = h{\nu} = {\hbar}{\omega}$, ${\nu} = {\omega}/2{\pi}$ is the frequency).[<sup>[2,3]</sup>](#reference-2) If this state is decaying through the process mentioned above instead of being stationary, it should follow the below relation:
 
-$$ |{\Psi}|^2 = |{psi}|^2e^{-t/{\tau}} $$，
+$$ |{\Psi}|^2 = |{\psi}|^2e^{-t/{\tau}} $$，
 
 $\tau$ is exactly the lifetime discussed above. Then the whole wavefunction could be rewritten as:
 
-$$ {\Psi} = {\psi}(\pmb{r})e^{-iEt/{\hbar}-t/2{\tau}} $$.
+$$ {\Psi} = {\psi}(\pmb{r})e^{-iEt/{\hbar}-t/2{\tau}}    \Longrightarrow    {\phi}(t) = e^{-iEt/{\hbar}-t/2{\tau}} $$.
 
-If we applied
+If we applied Fourier transform to the time-dependent term ${\phi}(t)$
 
 ### B. Doppler Broadening （多普勒致宽）
 
