@@ -51,7 +51,7 @@ This is a Lorentzian. **In conclusion, the lineshape of spectrum induced by natu
 
 $$ {\Delta}E = {\theta}_{HWHM} = {\hbar}/2{\tau}    \Longrightarrow    {\Delta}E{\Delta}t {\geq} {\Delta}E{\tau} = {\hbar}/2 $$,
 
-and this is the energy-time uncertainty principle (HWHM, half width at half maximum, 半峰半宽).[<sup>[4]</sup>](#reference-4)
+and this is the energy-time uncertainty principle (HWHM: half width at half maximum, 半峰半宽).[<sup>[4]</sup>](#reference-4)
 
 ### B. Doppler Broadening （多普勒致宽）
 
