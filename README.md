@@ -64,6 +64,7 @@ In this part, we will have a deep look at the working principles of the characte
 ### A. X-ray Diffraction (XRD)
 ### B. Raman
 ### C. UV-vis Absorption and Photoluminescence
+材料对光的吸收以及光致激发的原理很相近，都是基于材料的能带结构（带隙）的表征，但是对于吸收谱而言，只要是能量高于带隙的材料都有可以被吸收，因此吸收谱并不仅仅是单个Voigt函数或者是Voigt函数的叠加。我们可以利用KKRs来对吸收谱进行研究。
 
 
 ## References
