@@ -41,22 +41,24 @@ class anda:
                        'Voigt':4}
         return function_dict[function_name],nparam_dict[function_name]
 
-    # 背景基线函数
-    def Baseline(self,x,baseline): return baseline
+    # Fitting Module
 
-    def hypothesis_func(self,param_set,x,num_peaks,num_param,mode):
-        func = 180
+    # 背景基线函数
+    # def Baseline(self,x,baseline): return baseline
+
+    def hypothesis_func(self,param_set,x,num_peaks,num_param,baseline,mode):
+        func = baseline
         param_list = np.copy(param_set)
         param = np.zeros((num_param), dtype=float)  # num_param会比调用标准波形函数的参数个数多1个，因为最后一位是强度参数，而标准函数的强度固定，不考虑强度变化
         for i in range(num_peaks):
             for j in range(num_param):
-                param[j] = param_list[i*num_param+j+1]
+                param[j] = param_list[i*num_param+j]
             func += self.function(mode)[0](x,param)
             # print(param)
         return func
 
-    def Error(self,param_set,x,y,num_peaks,num_param,mode):
-        return y-self.hypothesis_func(param_set,x,num_peaks,num_param,mode)
+    def Error(self,param_set,x,y,num_peaks,num_param,baseline,mode):
+        return y-self.hypothesis_func(param_set,x,num_peaks,num_param,baseline,mode)
 
     # 计算拟合用的函数与测试结果的误差
     # def Error(self,x,y,num_peaks):
@@ -78,28 +80,45 @@ class anda:
         num_param = self.function(mode)[1]  # 单个波形函数的参数个数
         baseline = kwargs['baseline'] if 'baseline' in kwargs else 0  # 函数的基线，用于数据在y轴方向有平移的情况
 
+        fitted_param = None
         for n in range(len(npeaks_range)):
             num_peaks = npeaks_range[n]
             #print(num_peaks)
             # 输入应为[[函数1的参数1, 函数1的参数2], [函数2的参数1, 函数2的参数2], [函数3的参数1, 函数3的参数2]......]
             # nparam+1的1为强度参数，Intensity（因为所有预设函数都是分布函数的形式，积分为1）
             initial_param = kwargs['param'] if 'param' in kwargs else [[1]*(num_param)]*num_peaks
-            initial_param = [initial_param[i][j] for i in range(num_peaks) for j in range(num_param)]
+            initial_param = np.array([initial_param[i][j] for i in range(num_peaks) for j in range(num_param)])
             # 把出入参数解压成[函数1的参数1, 函数1的参数2, 函数2的参数1, 函数2的参数2, 函数3的参数1, 函数3的参数2......]形式方便拟合
-            initial_param = np.array([baseline]+initial_param)  # 在最开头加上基线，并将数据类型转化为数组
+            # initial_param = np.array(initial_param)  # 在最开头加上基线，并将数据类型转化为数组
 
             #print(initial_param[6])
 
-            fitted_param = leastsq(self.Error,initial_param,args=(x,y,num_peaks,num_param,mode))
+            fitted_param = leastsq(self.Error,initial_param,args=(x,y,num_peaks,num_param,baseline,mode))
 
-        return fitted_param
+        num_peaks = int(len(fitted_param[0])/num_param)  # 计算最终确定的峰的个数
+        fitted_result = fitted_param[0]
+        fitted_result = np.array([[fitted_result[i+j*num_param] for i in range(num_param)] for j in range(num_peaks)])
+
+        return fitted_result
+
+    def Fitted_curve(self,x,fitted_result,num_peaks,baseline,mode):
+        y_list = []
+        for n in range(len(x)):
+            y = baseline
+            for m in range(num_peaks):
+                y += self.function(mode)[0](x[n],fitted_result[m])
+            y_list.append(y)
+
+        return np.array(y_list)
 
 if __name__ == '__main__':
     gd = GetSpectra.geda()
     ad = anda()
 
-    data_directory = "D:/OneDrive/OneDrive - The Chinese University of Hong Kong/Desktop/Testing/GetData/B1-Raman.txt"
-    data = gd.Extract(data_directory, output_mode='original data')
+    # data_directory = "D:/OneDrive/OneDrive - The Chinese University of Hong Kong/Desktop/Testing/GetData/B1-Raman.txt"
+    data_directory = "/Users/liusongwei/PycharmProjects/MOJITO/Raman_PL/"
+    data_file = 'B1-Raman.txt'
+    data = gd.Extract(data_directory+data_file, output_mode='original data')
     data = gd.Range(data,340,450)
     data = gd.Rearrange(data)
 
@@ -111,15 +130,16 @@ if __name__ == '__main__':
     #print(gd.Visualize(data, xlim=(350, 450), ylim=(150, 250)))
     # print(ad.Fitting(data,num_peaks=2,param=[[380,1,1],[410,1,1]],mode='Lorentzian'))
 
-    Para = ad.Fitting(data,num_peaks=2,param=[[380,10,1],[410,10,1]],mode='Lorentzian')[0]
+    Para = ad.Fitting(data,num_peaks=2,param=[[380,10,90],[410,10,300]],mode='Lorentzian',baseline=180)
     print(Para)
     def FittedCurve(x):
-        baseline, w1, gamma1, i1, w2, gamma2, i2= Para
+        w1, gamma1, i1 = Para[0]
+        w2, gamma2, i2 = Para[1]
         f1 = i1*(gamma1/2)/(pi*((x-w1)**2+(gamma1/2)**2))
         f2 = i2 * (gamma2 / 2) / (pi * ((x - w2) ** 2 + (gamma2 / 2) ** 2))
         # f3 = i3 * (gamma3 / 2) / (pi * ((x - w3) ** 2 + (gamma3 / 2) ** 2))
-        return baseline+f1+f2
-    x0 = np.linspace(340,450,100)
+        return f1+f2
+    x0 = np.linspace(340,450,500)
 
     plt.plot(x0,FittedCurve(x0))
     plt.plot(data[0],data[1])

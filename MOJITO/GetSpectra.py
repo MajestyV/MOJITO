@@ -1,6 +1,10 @@
 import codecs
 import re
+import numpy as np
 import matplotlib.pyplot as plt
+from MOJITO import AnaData
+
+ad = AnaData.anda()
 
 class geda:
     """ This class of functions is designed for the extraction and analysis of spectrums gathered from materials characterization. """
@@ -79,6 +83,11 @@ class geda:
 
         step = kwargs['step'] if kwargs['Seperated'] == 'True' else 0
         Data = self.Seperate(Data,step)
+        baseline = kwargs['baseline'] if 'baseline' in kwargs else 0  # 信号的基线
+        if kwargs['Seperated'] == 'True':
+            baseline = [baseline+n*step for n in range(num_curves)]
+        else:
+            baseline = [baseline]*num_curves
 
         plt.rcParams['xtick.direction'] = 'in'
         plt.rcParams['ytick.direction'] = 'in'
@@ -86,6 +95,17 @@ class geda:
         for n in range(num_curves):
             x, y = Data[n]
             plt.plot(x,y,label=curve_label[n],linewidth=linewidth,linestyle=linestyle,color=color[n],marker=marker[n],markersize=markersize)
+
+            if kwargs['Fitted'] == 'True':
+                num_peaks = kwargs['num_peaks'] if 'num_peaks' in kwargs else 2
+                initial_param = kwargs['initial parameters'] if 'initial parameters' in kwargs else None
+                mode = kwargs['fitting mode'] if 'fitting mode' in kwargs else 'Lorentzian'
+                fitted_param = ad.Fitting(Data[n],num_peaks=num_peaks,param=initial_param,mode=mode,baseline=baseline[n])
+
+                npoints_fitted = kwargs['fitting points'] if 'fitting points' in kwargs else 500
+                x_fitted = np.linspace(xlim[0],xlim[1],npoints_fitted)
+                y_fitted = ad.Fitted_curve(x,fitted_param,num_peaks,baseline,mode)
+                plt.plot(x_fitted,y_fitted)
 
         plt.xlabel(xlabel,fontsize=fontsize)
         plt.ylabel(ylabel,fontsize=fontsize)
@@ -104,4 +124,4 @@ if __name__ == '__main__':
     #print(gd.Extract(data_directory,output_mode='testing parameters'))
     #print(gd.Range(data,350,450))
     print(data)
-    print(gd.Visualize(data,xlim=(350,450),ylim = (150,250)))
+    print(gd.Visualize(data,xlim=(350,450),ylim = (150,250),Fitted='Ture',num_peaks=2,param=[[380,10,90],[410,10,300]],mode='Lorentzian',baseline=180))
