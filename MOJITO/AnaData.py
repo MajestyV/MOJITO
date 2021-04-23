@@ -97,10 +97,11 @@ class anda:
 
         num_peaks = int(len(fitted_param[0])/num_param)  # 计算最终确定的峰的个数
         fitted_result = fitted_param[0]
-        fitted_result = np.array([[fitted_result[i+j*num_param] for i in range(num_param)] for j in range(num_peaks)])
+        fitted_result = [[fitted_result[i+j*num_param] for i in range(num_param)] for j in range(num_peaks)]
 
         return fitted_result
 
+    # 用于从各个波的参数复原拟合函数的函数
     def Fitted_curve(self,x,fitted_result,num_peaks,baseline,mode):
         y_list = []
         for n in range(len(x)):
@@ -116,8 +117,8 @@ if __name__ == '__main__':
     ad = anda()
 
     # data_directory = "D:/OneDrive/OneDrive - The Chinese University of Hong Kong/Desktop/Testing/GetData/B1-Raman.txt"
-    data_directory = "/Users/liusongwei/PycharmProjects/MOJITO/Raman_PL/"
-    data_file = 'B1-Raman.txt'
+    data_directory = "D:/Projects/PhaseTransistor/DataGallery/2021-04-14-Characterizations/Raman_PL/2021-04-14/"
+    data_file = 'D1-Raman.txt'
     data = gd.Extract(data_directory+data_file, output_mode='original data')
     data = gd.Range(data,340,450)
     data = gd.Rearrange(data)
@@ -130,7 +131,7 @@ if __name__ == '__main__':
     #print(gd.Visualize(data, xlim=(350, 450), ylim=(150, 250)))
     # print(ad.Fitting(data,num_peaks=2,param=[[380,1,1],[410,1,1]],mode='Lorentzian'))
 
-    Para = ad.Fitting(data,num_peaks=2,param=[[380,10,90],[410,10,300]],mode='Lorentzian',baseline=180)
+    Para = ad.Fitting(data,num_peaks=2,param=[[380,10,90],[410,10,300]],mode='Lorentzian',baseline=50)
     print(Para)
     def FittedCurve(x):
         w1, gamma1, i1 = Para[0]
@@ -140,7 +141,11 @@ if __name__ == '__main__':
         # f3 = i3 * (gamma3 / 2) / (pi * ((x - w3) ** 2 + (gamma3 / 2) ** 2))
         return f1+f2
     x0 = np.linspace(340,450,500)
+    y0 = ad.Fitted_curve(x0,Para,2,50,'Lorentzian')
+    print(y0)
+    plt.plot(x0,y0)
 
-    plt.plot(x0,FittedCurve(x0))
-    plt.plot(data[0],data[1])
+
+    # plt.plot(x0,FittedCurve(x0))
+    #plt.plot(data[0],data[1])
 

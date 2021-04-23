@@ -4,8 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from MOJITO import AnaData
 
-ad = AnaData.anda()
-
 class geda:
     """ This class of functions is designed for the extraction and analysis of spectrums gathered from materials characterization. """
     # eg. X-ray Diffraction (XRD), Raman, UV-vis absorption and photoluminescence (PL)
@@ -62,13 +60,25 @@ class geda:
                 Data[n][1][m] = Data[n][1][m]+shift
         return Data
 
+    def Visualize_Fitting(self,Datum,initial_param,num_peaks,baseline,mode,xlim,num_points,linewidth=1,linestyle='-.'):
+        ad = AnaData.anda()
+
+        fitted_param = ad.Fitting(Datum, num_peaks=num_peaks, param=initial_param, mode=mode, baseline=baseline)
+        x_fitted = np.linspace(xlim[0], xlim[1], num_points)
+        y_fitted = ad.Fitted_curve(x_fitted, fitted_param, num_peaks, baseline, mode)
+        plt.plot(x_fitted, y_fitted,linewidth=linewidth,linestyle=linestyle)
+
+        return
+
     # 输入形式为：Data = [测试数据列表1，测试数据列表2，测试数据列表3......]
     def Visualize(self,Data,**kwargs):
+        ad = AnaData.anda()
+
         if not isinstance(Data[0][0],list):  # 对于单个测试的数据，如果没有写成[测试数据列表]这样的形式，则对其进行格式修正
             Data = [Data]
         num_curves = len(Data)  # number of curves in the plot
 
-        curve_label = kwargs['curve label'] if 'curve label' in kwargs else [None]*num_curves  # 默认设定不对曲线进行标注
+        curve_label = kwargs['curve_label'] if 'curve_label' in kwargs else [None]*num_curves  # 默认设定不对曲线进行标注
         linewidth = kwargs['linewidth'] if 'linewidth' in kwargs else 1.0      # 曲线线宽
         linestyle = kwargs['linestyle'] if 'linestyle' in kwargs else '-'      # 曲线线型
         marker = kwargs['marker'] if 'marker' in kwargs else [None]*num_curves  # 默认设定不显示数据点
@@ -81,47 +91,64 @@ class geda:
         xlim = kwargs['xlim'] if 'xlim' in kwargs else (min(Data[0][0]),max(Data[0][0]))
         ylim = kwargs['ylim'] if 'ylim' in kwargs else (min(Data[0][1]),max(Data[0][1]))
 
-        step = kwargs['step'] if kwargs['Seperated'] == 'True' else 0
-        Data = self.Seperate(Data,step)
-        baseline = kwargs['baseline'] if 'baseline' in kwargs else 0  # 信号的基线
-        if kwargs['Seperated'] == 'True':
-            baseline = [baseline+n*step for n in range(num_curves)]
+        # 高级功能
+        Seperating = kwargs['Seperating'] if 'Seperating' in kwargs else 'False'  # 信号分波
+        step = kwargs['step'] if 'step' in kwargs else 0
+        if Seperating != 'True':
+            pass
+        elif step == 0:
+            step = float(input('--- Please provide a valid step value. ---'))
+            Data = self.Seperate(Data, step)
         else:
-            baseline = [baseline]*num_curves
+            Data = self.Seperate(Data, step)
+
+        Fitting = kwargs['Fitting'] if 'Fitting' in kwargs else 'False'  # 信号拟合
+        baseline = kwargs['baseline'] if 'baseline' in kwargs else 0  # 信号的基线
+        if Seperating == 'True' and (isinstance(baseline,int) or isinstance(baseline,float)):
+            baseline = [baseline+n*step for n in range(num_curves)]
+        elif isinstance(baseline,int) or isinstance(baseline,float):
+            baseline = [baseline]
+        else:
+            pass
 
         plt.rcParams['xtick.direction'] = 'in'
         plt.rcParams['ytick.direction'] = 'in'
 
+        # x,y,x_fitted,y_fitted = [None]*4
         for n in range(num_curves):
             x, y = Data[n]
             plt.plot(x,y,label=curve_label[n],linewidth=linewidth,linestyle=linestyle,color=color[n],marker=marker[n],markersize=markersize)
 
-            if kwargs['Fitted'] == 'True':
+            if Fitting == 'True':
                 num_peaks = kwargs['num_peaks'] if 'num_peaks' in kwargs else 2
-                initial_param = kwargs['initial parameters'] if 'initial parameters' in kwargs else None
-                mode = kwargs['fitting mode'] if 'fitting mode' in kwargs else 'Lorentzian'
-                fitted_param = ad.Fitting(Data[n],num_peaks=num_peaks,param=initial_param,mode=mode,baseline=baseline[n])
-
+                initial_param = kwargs['param'] if 'param' in kwargs else None
+                mode = kwargs['mode'] if 'mode' in kwargs else 'Lorentzian'
+                #fitted_param = ad.Fitting(Data[n],num_peaks=num_peaks,param=initial_param,mode=mode,baseline=baseline[n])
                 npoints_fitted = kwargs['fitting points'] if 'fitting points' in kwargs else 500
-                x_fitted = np.linspace(xlim[0],xlim[1],npoints_fitted)
-                y_fitted = ad.Fitted_curve(x,fitted_param,num_peaks,baseline,mode)
-                plt.plot(x_fitted,y_fitted)
+                self.Visualize_Fitting(Data[n],initial_param,num_peaks,baseline[n],mode,xlim,npoints_fitted)
+                #x_fitted = np.linspace(xlim[0],xlim[1],npoints_fitted)
+                #y_fitted = ad.Fitted_curve(x_fitted,fitted_param,num_peaks,baseline[n],mode)
+                #plt.plot(x_fitted,y_fitted)
 
         plt.xlabel(xlabel,fontsize=fontsize)
         plt.ylabel(ylabel,fontsize=fontsize)
+        plt.legend(loc='best')
         plt.xlim(xlim[0],xlim[1])
         plt.ylim(ylim[0],ylim[1])
         plt.title(kwargs['title'],fontsize=title_fontsize) if 'title' in kwargs else None
 
-        return xlim
+        plt.yticks([])
+
+        return
 
 if __name__ == '__main__':
     gd = geda()
-    data_directory = "D:/OneDrive/OneDrive - The Chinese University of Hong Kong/Desktop/Testing/GetData/D1-Raman.txt"
+    data_directory = "D:/Projects/PhaseTransistor/DataGallery/2021-04-14-Characterizations/Raman_PL/2021-04-14/D1-Raman.txt"
     data = gd.Extract(data_directory,output_mode='data')
     #print(gd.Extract(data_directory,output_mode='data'))
     #print(gd.Extract(data_directory,output_mode='original data'))
     #print(gd.Extract(data_directory,output_mode='testing parameters'))
     #print(gd.Range(data,350,450))
-    print(data)
-    print(gd.Visualize(data,xlim=(350,450),ylim = (150,250),Fitted='Ture',num_peaks=2,param=[[380,10,90],[410,10,300]],mode='Lorentzian',baseline=180))
+    #print(data)
+    #print(gd.Visualize(data,xlim=(350,450),Fitted='Ture',num_peaks=2,param=[[380,10,90],[410,10,300]],mode='Lorentzian',baseline=180))
+    gd.Visualize(data, xlim=(350, 450),Fitting='True',num_peaks=2, param=[[380, 10, 90], [410, 10, 300]],mode='Lorentzian', baseline=50)
