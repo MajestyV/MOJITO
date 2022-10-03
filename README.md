@@ -1,5 +1,4 @@
-# MOJITO
-**M**aterials pr**OJ**ect on analyz**I**ng spec**T**r**O**scopy
+# MOJITO-**M**aterials pr**OJ**ect on analyz**I**ng spec**T**r**O**scopy
 
 ## I. Introduction
 The name *MOJITO* stands for materials project on analyzing spectroscopy. Though this abbreviation might not be favourable to everyone, this project is actually aiming to solve the problems of analyzing spectrums for anyone who works in materials science and related areas.
@@ -45,11 +44,11 @@ $$ g({\varepsilon}) = {\int}{\phi}(t)e^{i{\varepsilon}t/{\hbar}}dt $$
 
 and as a result
 
-$$ g({\varepsilon}) = \frac{{\hbar}/2{\pi}{\tau}}{({\varepsilon}-E)^2+({\hbar}/2{\tau})^2} $$.
+$$ g({\varepsilon}) = \frac{{\hbar}/2{\pi}{\tau}}{({\varepsilon}-E)^2+({\hbar}/2{\tau})^2} . $$
 
 This is a Lorentzian. **In conclusion, the lineshape of spectrum induced by natural broadening is Lorentzian.** The energy distribution of the above formula is
 
-$$ {\Delta}E = {\theta}_{HWHM} = {\hbar}/2{\tau}    \Longrightarrow    {\Delta}E{\Delta}t {\geq} {\Delta}E{\tau} = {\hbar}/2 $$,
+$$ {\Delta}E = {\theta}_{HWHM} = {\hbar}/2{\tau}    \Longrightarrow    {\Delta}E{\Delta}t {\geq} {\Delta}E{\tau} = {\hbar}/2 , $$
 
 and this is the energy-time uncertainty principle (HWHM: half width at half maximum, 半峰半宽).[<sup>[4]</sup>](#reference-4)
 
